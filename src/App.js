@@ -4,7 +4,7 @@ import Todos from './components/Todos';
 import Posts from './components/Posts';
 import Home from './components/Home';
 import Comments from './components/Comments';
-import { BrowserRouter as Router, Route ,Link, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route , Routes} from "react-router-dom";
 
 
 function App() {
