@@ -1,0 +1,23 @@
+body{
+    background-color: #F9F9F9;
+
+}
+.card{
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2EBE9;
+    color: #7C3E66;
+}
+.home{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+}

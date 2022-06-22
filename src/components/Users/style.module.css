@@ -1,0 +1,19 @@
+.body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F9F9F9;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    display: inline-flex;
+    margin-right: 15px;
+    margin-top: 15px;
+    background-color: #F2EBE9;
+    color: #7C3E66;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
