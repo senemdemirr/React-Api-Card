@@ -12,3 +12,5 @@ cd React-Api-Card
 npm i
 npm start
 ```
+
+[live demo](https://effortless-chaja-155165.netlify.app/)
