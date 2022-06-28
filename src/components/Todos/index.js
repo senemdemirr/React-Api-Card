@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import style from './style.module.css';
+import '../../style.css';
 
 function Todos() {
   const [todos , setTodos] = useState([]);
@@ -11,9 +11,9 @@ function Todos() {
      .then(res => setTodos(res.data))
     },[]);
   return (
-    <div className={style.body}>
+    <div className="body">
      {todos.map(todo => (
-      <li className={style.container}>
+      <li className="container">
       <div key={todo.id}>
         <p>{todo.id}</p>
         <h3>{todo.title}</h3>

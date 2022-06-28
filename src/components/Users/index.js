@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import style from './style.module.css';
+import '../../style.css';
 
 
 function Users() {
@@ -16,9 +16,9 @@ function Users() {
     .catch(err => console.log(err));
   })
   return (
-    <div className={style.body}>
+    <div className="body">
       {users && users.map(user => (
-        <li className={style.container}>
+        <li className="container">
           <div key={user.id}>
             <h3>{user.name}</h3>
             <p>{user.email}</p>
@@ -28,13 +28,6 @@ function Users() {
         </li>
       ))}
     </div>
-    // <ul>
-    //   {users && users.map(user => (
-    //     <li key={user.id}>
-    //       {user.name}
-    //     </li>
-    //   ))}
-    // </ul>
   )
 }
 
