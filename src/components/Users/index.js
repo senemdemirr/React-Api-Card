@@ -8,13 +8,11 @@ function Users() {
   useEffect(() =>{
     fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => {
-      if(res.ok && res.status === 200){
-        return res.json();
-      }
+      return res.json();
     })
     .then(data => setUsers(data))
     .catch(err => console.log(err));
-  })
+  },[])
   return (
     <div className="body">
       {users && users.map(user => (
