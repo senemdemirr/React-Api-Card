@@ -1,10 +1,13 @@
 import {useEffect, useState} from 'react'
 import '../../style.css';
+import ReactLoading from 'react-loading';
 
 
 function Users() {
 
   const [users , setUsers] =useState(false);
+  const [isLoading , setLoading] = useState(true);
+
   useEffect(() =>{
     fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => {
@@ -12,6 +15,8 @@ function Users() {
     })
     .then(data => setUsers(data))
     .catch(err => console.log(err));
+    setLoading(false);
+
   },[])
   return (
     <div className="body">
@@ -25,6 +30,11 @@ function Users() {
           </div>
         </li>
       ))}
+      <div className='loading'>
+        {isLoading ? (users) : (
+          <ReactLoading  type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} />
+        )}
+        </div>
     </div>
   )
 }

@@ -14,3 +14,9 @@
     color: #7C3E66;
     border-radius: 10px;
 }
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
