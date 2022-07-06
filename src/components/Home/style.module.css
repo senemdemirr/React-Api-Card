@@ -21,3 +21,23 @@ body{
    justify-content: space-around;
    width: 100%;
 }
+
+@media only screen and (max-width: 1009px) {
+    .home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+  }
+  @media only screen and (max-width: 510px) {
+    .home{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+    .card{
+        margin-top: 25px;
+    }
+  }
