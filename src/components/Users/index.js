@@ -20,6 +20,8 @@ function Users() {
   },[])
   return (
     <div className="body">
+      {isLoading ? <ReactLoading className='loading' type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} /> :  
+      <div>
       {users && users.map(user => (
         <li className="container">
           <div key={user.id}>
@@ -30,11 +32,8 @@ function Users() {
           </div>
         </li>
       ))}
-      <div className='loading'>
-        {isLoading ? (users) : (
-          <ReactLoading  type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} />
-        )}
-        </div>
+      </div>
+}
     </div>
   )
 }

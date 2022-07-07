@@ -15,6 +15,8 @@ function Posts() {
     },[]);
   return (
     <div className={style.body}>
+      {isLoading ? <ReactLoading className={style.loading} type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} /> :  
+      <div>
       {posts && posts.map(post => (
         <li className={style.container}>
           <div key={post.id}>
@@ -23,11 +25,8 @@ function Posts() {
           </div>
         </li>
       ))}
-      <div className={style.loading}>
-        {isLoading ? (posts) : (
-          <ReactLoading  type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} />
-        )}
       </div>
+}
     </div>
   )
 }

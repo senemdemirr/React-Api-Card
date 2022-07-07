@@ -16,6 +16,9 @@ function Comments() {
     },[]);
   return (
         <div className={style.body}>
+            
+            {isLoading ? <ReactLoading className={style.loading} type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} /> :  
+            <div>
             {comments && comments.map(comment => (
                 <li  className={style.container}>
                     <div key={comment.id}>
@@ -25,13 +28,9 @@ function Comments() {
                     </div>
                 </li>
             ))}
-            <div className={style.loading}>
-                {isLoading ? (comments) : (
-                    <ReactLoading  type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} />
-                )}
             </div>
+}
         </div>
-
   )
 }
 

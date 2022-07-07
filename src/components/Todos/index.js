@@ -17,6 +17,8 @@ function Todos() {
     },[]);
   return (
     <div className="body">
+      {isLoading ? <ReactLoading className='loading' type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} /> :  
+      <div>
      {todos.map(todo => (
       <li className="container">
       <div key={todo.id}>
@@ -25,11 +27,8 @@ function Todos() {
       </div>
     </li>
      ))}
-     <div className='loading'>
-        {isLoading ? (todos) : (
-          <ReactLoading  type={'spin'} color={'#7C3E66'} height={'10%'} width={'10%'} />
-        )}
-        </div>
+     </div>
+}
     </div>
   )
 }
