@@ -9,9 +9,14 @@ function Posts() {
   const [isLoading , setLoading] = useState(true);
   
   useEffect(() =>{
-     axios.get("https://jsonplaceholder.typicode.com/posts")
+     setTimeout(() => {
+      axios.get("https://jsonplaceholder.typicode.com/posts")
      .then(res => setPosts(res.data))
-     setLoading(false);
+     },500)
+     
+     setTimeout(() => {
+      setLoading(false)
+     },500)
     },[]);
   return (
     <div className={style.body}>

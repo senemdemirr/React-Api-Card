@@ -6,13 +6,18 @@ function Comments() {
     const [comments , setComments] = useState(false);
     const [isLoading , setLoading] = useState(true);
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/comments")
+        setTimeout(() => {
+            fetch("https://jsonplaceholder.typicode.com/comments")
         .then(res => {
             return res.json();
         })
         .then(data => setComments(data))
-        .catch(err => console.log(err));
-        setLoading(false);
+        .catch(err => console.log(err))
+        },500)
+        
+        setTimeout(() => {
+            setLoading(false)
+        },500)
     },[]);
   return (
         <div className={style.body}>

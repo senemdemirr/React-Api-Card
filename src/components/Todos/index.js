@@ -10,9 +10,13 @@ function Todos() {
     
   
   useEffect(() =>{
-     axios.get("https://jsonplaceholder.typicode.com/todos")
+     setTimeout(() => {
+      axios.get("https://jsonplaceholder.typicode.com/todos")
      .then(res => setTodos(res.data))
-     setLoading(false);
+     },500)
+     setTimeout(() => {
+      setLoading(false)
+     },500)
 
     },[]);
   return (
